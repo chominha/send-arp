@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 	packet.arp_.pro_ = htons(EthHdr::Ip4);
 	packet.arp_.hln_ = Mac::Size;
 	packet.arp_.pln_ = Ip::Size;
-
+	packet.arp_.op_ = htons(ArpHdr::Request);
 	packet.arp_.smac_ = Mac("00:00:00:00:00:00");
 	packet.arp_.sip_ = htonl(Ip("0.0.0.0"));
 	packet.arp_.tmac_ = Mac("00:00:00:00:00:00");
