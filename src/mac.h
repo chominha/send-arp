@@ -53,7 +53,7 @@ struct Mac final {
 	static Mac& broadcastMac();
 
 protected:
-	uint8_t mac_[Size];
+    uint8_t mac_[Size]; //6byte
 };
 
 namespace std {

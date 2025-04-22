@@ -5,9 +5,9 @@
 
 #pragma pack(push, 1)
 struct EthHdr final {
-	Mac dmac_;
-	Mac smac_;
-	uint16_t type_;
+    Mac dmac_; //6
+    Mac smac_; //6
+    uint16_t type_; //2
 
 	Mac dmac() { return dmac_; }
 	Mac smac() { return smac_; }

@@ -31,19 +31,19 @@ int main(int argc, char* argv[]) {
 
 	EthArpPacket packet;
 
-	packet.eth_.dmac_ = Mac("00:00:00:00:00:00");
-	packet.eth_.smac_ = Mac("00:00:00:00:00:00");
+    packet.eth_.dmac_ = Mac("00:ad:a7:02:01:01");
+    packet.eth_.smac_ = Mac("00:0f:00:40:3a:77");
 	packet.eth_.type_ = htons(EthHdr::Arp);
 
 	packet.arp_.hrd_ = htons(ArpHdr::ETHER);
 	packet.arp_.pro_ = htons(EthHdr::Ip4);
 	packet.arp_.hln_ = Mac::Size;
 	packet.arp_.pln_ = Ip::Size;
-	packet.arp_.op_ = htons(ArpHdr::Request);
-	packet.arp_.smac_ = Mac("00:00:00:00:00:00");
-	packet.arp_.sip_ = htonl(Ip("0.0.0.0"));
-	packet.arp_.tmac_ = Mac("00:00:00:00:00:00");
-	packet.arp_.tip_ = htonl(Ip("0.0.0.0"));
+    packet.arp_.op_ = htons(ArpHdr::Reply);
+    packet.arp_.smac_ = Mac("00:0f:00:40:3a:77");
+    packet.arp_.sip_ = htonl(Ip("172.20.10.1"));
+    packet.arp_.tmac_ = Mac("00:ad:a7:02:01:01");
+    packet.arp_.tip_ = htonl(Ip("172.20.10.14"));
 
 	int res = pcap_sendpacket(pcap, reinterpret_cast<const u_char*>(&packet), sizeof(EthArpPacket));
 	if (res != 0) {

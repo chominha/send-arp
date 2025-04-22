@@ -33,5 +33,5 @@ struct Ip final {
 	}
 
 protected:
-	uint32_t ip_;
+    uint32_t ip_; //class -> 4byte
 };

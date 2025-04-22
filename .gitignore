@@ -2,4 +2,39 @@ build*/
 *.user
 *.o
 send-arp-test
+# Ignore build directories
+build/
 
+# Qt build files
+*.pro.user
+*.pro.user.*
+*.qtc_opensource.*
+*.autosave
+
+# CMake build files
+CMakeLists.txt.user
+
+# Make build files
+*.o
+*.a
+*.so
+
+# Qt Creator specific files
+*.creator*
+*.includes
+*.config
+*.creator.user.*
+
+# Backup and temporary files
+*~
+*.swp
+*.bak
+*.tmp
+
+# Thumbnails and caches
+Thumbs.db
+.DS_Store
+.idea/
+
+# Log files
+*.log

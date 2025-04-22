@@ -9,7 +9,7 @@
 struct ArpHdr final {
 	uint16_t hrd_;
 	uint16_t pro_;
-	uint8_t hln_;
+    uint8_t hln_; //macadress len
 	uint8_t pln_;
 	uint16_t op_;
 	Mac smac_;

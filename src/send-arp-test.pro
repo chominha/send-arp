@@ -9,7 +9,8 @@ SOURCES += \
 	ethhdr.cpp \
 	ip.cpp \
 	mac.cpp \
-	main.cpp
+	main.cpp \
+	send-arp.cpp
 
 HEADERS += \
 	arphdr.h \
